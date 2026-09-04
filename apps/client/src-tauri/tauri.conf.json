@@ -30,6 +30,14 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "macOS": {
+      "minimumSystemVersion": "10.15",
+      "entitlements": "Entitlements.plist",
+      "signingIdentity": "Apple Development: leif@xes.software (25M7H78G26)",
+      "files": {
+        "embedded.provisionprofile": "/Users/leifelliott/Library/Developer/Xcode/DerivedData/client-bpdvesrauhytbjgfzrmyuujrjfjl/Build/Products/Debug/client.app/Contents/embedded.provisionprofile"
+      }
+    }
   }
 }

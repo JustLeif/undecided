@@ -4,12 +4,14 @@ import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
+  const [key, setKey] = useState();
 
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
+  async function set() {
+    await invoke("set_keyring");
+  }
+
+  async function get() {
+    setKey(await invoke("get_keyring"));
   }
 
   return (
@@ -33,17 +35,12 @@ function App() {
         className="row"
         onSubmit={(e) => {
           e.preventDefault();
-          greet();
+          set().then(() => get());
         }}
       >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
         <button type="submit">Greet</button>
       </form>
-      <p>{greetMsg}</p>
+      <p>{key}</p>
     </main>
   );
 }
