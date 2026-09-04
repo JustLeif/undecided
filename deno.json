@@ -1,0 +1,6 @@
+{
+  "workspace": [
+    "apps/*"
+  ],
+  "nodeModulesDir": "auto"
+}
