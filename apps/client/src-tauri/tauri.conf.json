@@ -36,7 +36,7 @@
       "entitlements": "Entitlements.plist",
       "signingIdentity": "Apple Development: leif@xes.software (25M7H78G26)",
       "files": {
-        "embedded.provisionprofile": "/Users/leifelliott/Library/Developer/Xcode/DerivedData/client-bpdvesrauhytbjgfzrmyuujrjfjl/Build/Products/Debug/client.app/Contents/embedded.provisionprofile"
+        "embedded.provisionprofile": "../../../.xcode-signing/Build/Products/Debug/client.app/Contents/embedded.provisionprofile"
       }
     }
   }
