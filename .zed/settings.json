@@ -1,5 +1,17 @@
 {
   "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "check",
+          "targets": [
+            "aarch64-apple-darwin",
+            "aarch64-apple-ios",
+            "aarch64-linux-android"
+          ]
+        }
+      }
+    },
     "deno": {
       "settings": {
         "deno": {
