@@ -7,6 +7,5 @@
     "macos:provision": "xcodebuild -project /Users/leifelliott/Desktop/client/client.xcodeproj -scheme client -configuration Debug -destination 'platform=macOS,arch=arm64' -derivedDataPath ./.xcode-signing -allowProvisioningUpdates -allowProvisioningDeviceRegistration build",
     "macos:build": "deno task macos:provision && deno task --cwd apps/client tauri build --debug --bundles app",
     "macos:run": "deno task macos:build && open -n apps/client/src-tauri/target/debug/bundle/macos/client.app"
-
   }
 }
